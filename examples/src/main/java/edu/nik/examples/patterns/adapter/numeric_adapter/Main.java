@@ -6,11 +6,11 @@ public class Main {
 
     Adapter adapter = new Adapter(original);
 
-    Client client = new Client(adapter);
+    Client client= new Client(adapter);
 
     adapter.clientInt(7);
     client.clientInt(5);
-    
+    client.show();
 
 
 }
