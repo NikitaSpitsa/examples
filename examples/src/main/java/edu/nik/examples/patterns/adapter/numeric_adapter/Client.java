@@ -13,5 +13,4 @@ public class Client{
         client.clientInt(6);
         client.clientChar('z');
     }
-    gjkfkjf
 }
