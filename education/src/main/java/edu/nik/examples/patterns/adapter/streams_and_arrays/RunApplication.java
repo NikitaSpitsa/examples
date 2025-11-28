@@ -19,13 +19,13 @@ public class RunForTest {
         for (Object object : objectsArray) {
             if (object instanceof String[]) {
                 String[] stringArray = (String[]) object;
-                for (String sell : stringArray){
-                    System.out.print(" " + sell);
+                for (String item : stringArray){
+                    System.out.print(" " + item);
                 }
             } else if (object instanceof int[]) {
                 int[] intArray = (int[]) object;
-                for (int sell : intArray){
-                    System.out.print(" " + sell);
+                for (int item : intArray){
+                    System.out.print(" " + item);
                 }
             } else{
                 System.out.print(object);
@@ -60,10 +60,10 @@ public class RunForTest {
             if (object != null) {
                 if (object instanceof Collection) {
                     resultList.addAll((Collection) object);
-                } else if (object instanceof String[]) {
-                    resultList.add((String[]) object);
-                } else if (object instanceof int[]) {
-                    resultList.add((int[]) object);
+//                } else if (object instanceof String[]) {
+//                    resultList.add((String[]) object);
+//                } else if (object instanceof int[]) {
+//                    resultList.add((int[]) object);
                 } else {
                     resultList.add(object);
                 }
