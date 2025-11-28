@@ -7,12 +7,13 @@ import java.util.List;
 
 public class RunForTest {
     public static void main(String[] args) {
-        Object[] objectsArray = new Object[4];
+        Object[] objectsArray = new Object[5];
 
-        objectsArray[0] = "Hellow";
+        objectsArray[0] = "value";
         objectsArray[1] = new String[]{"Lilu", "Mabo"};
         objectsArray[2] = new int[]{1, 2, 3};
-        objectsArray[3] = new ArrayList<>(Arrays.asList("Good", 45, "Look"));
+        objectsArray[3] = "%pattern%";
+        objectsArray[4] = new ArrayList<>(Arrays.asList("Good", 45, "Look"));
 
         System.out.println("we have input :\n");
         for (Object object : objectsArray) {
