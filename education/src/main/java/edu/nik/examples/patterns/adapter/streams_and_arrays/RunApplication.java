@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class RunForTest {
+public class RunApplication {
     public static void main(String[] args) {
         Object[] objectsArray = new Object[5];
 
@@ -16,6 +16,13 @@ public class RunForTest {
         objectsArray[4] = new ArrayList<>(Arrays.asList("Good", 45, "Look"));
 
         System.out.println("we have input :\n");
+        print(objectsArray);
+
+        System.out.println("\n Then we made flat and got output : \n");
+        print (flatten(objectsArray));
+    }
+
+    private static void print(Object[] objectsArray) {
         for (Object object : objectsArray) {
             if (object instanceof String[]) {
                 String[] stringArray = (String[]) object;
@@ -33,24 +40,6 @@ public class RunForTest {
             System.out.println();
 
         }
-
-        System.out.println("\n Then we made flat and got output : \n");
-        for (Object object : flatten(objectsArray)) {
-            if (object instanceof String[] stringArray) {
-                for (String sell : stringArray){
-                    System.out.print(" " + sell);
-                }
-            } else if (object instanceof int[]) {
-                int[] intArray = (int[]) object;
-                for (int sell : intArray){
-                    System.out.print(" " + sell);
-                }
-            } else{
-                System.out.print(object);
-            }
-            System.out.println();
-
-        }
     }
 
     private static Object[] flatten(Object[] array) {
@@ -60,10 +49,6 @@ public class RunForTest {
             if (object != null) {
                 if (object instanceof Collection) {
                     resultList.addAll((Collection) object);
-//                } else if (object instanceof String[]) {
-//                    resultList.add((String[]) object);
-//                } else if (object instanceof int[]) {
-//                    resultList.add((int[]) object);
                 } else {
                     resultList.add(object);
                 }
