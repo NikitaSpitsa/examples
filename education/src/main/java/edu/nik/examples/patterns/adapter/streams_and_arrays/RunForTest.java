@@ -36,8 +36,7 @@ public class RunForTest {
 
         System.out.println("\n Then we made flat and got output : \n");
         for (Object object : flatten(objectsArray)) {
-            if (object instanceof String[]) {
-                String[] stringArray = (String[]) object;
+            if (object instanceof String[] stringArray) {
                 for (String sell : stringArray){
                     System.out.print(" " + sell);
                 }
