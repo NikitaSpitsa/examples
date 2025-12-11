@@ -1,9 +1,7 @@
 package edu.nik.examples.patterns.adapter.streams_and_arrays;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Stream;
 
 public class RunApplication {
     public static void main(String[] args) {
@@ -43,18 +41,9 @@ public class RunApplication {
     }
 
     private static Object[] flatten(Object[] array) {
-        List<Object> resultList = new ArrayList<>();
-
-        for (Object object : array) {
-            if (object != null) {
-                if (object instanceof Collection) {
-                    resultList.addAll((Collection) object);
-                } else {
-                    resultList.add(object);
-                }
-            }
-        }
-
-        return resultList.toArray();
+        return Arrays.stream(array)
+                .filter(Objects::nonNull)
+                .flatMap(obj -> obj instanceof Collection<?> ? ((Collection<?>) obj).stream() : Stream.of(obj))
+               .toArray(Object[]::new);
     }
 }
