@@ -1,19 +1,44 @@
 package edu.nik.examples.patterns.builder.pizza;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class PizzaNameBuilder extends Pizza {
-    Pizza pizza;
+public class PizzaBuilder {
 
-    public PizzaNameBuilder(Pizza pizza) {
-        this.pizza = pizza;
+    List<String> ingredientsList =  new ArrayList<>();
+    List<String> sauceList =  new ArrayList<>();
+    String dough = Dough.THIN.getDescription();
+    String pizzaName = "Classic Pizza";
+    double pizzaPrice = 5.0;
+
+    public PizzaBuilder addIngredient(String ingredientName){
+        this.ingredientsList.add(ingredientName);
+        return this;
     }
 
-    public String getName (){
-        StringBuffer name = new StringBuffer();
-        name.append(pizza.description);
-        name.append(pizza.getDough());
+    public PizzaBuilder addSauce(String sauceName) {
+        this.sauceList.add(sauceName);
+        return this;
+    }
 
-        return name.toString();
+    public PizzaBuilder chengeDough(Dough dough) {
+        this.dough = dough.getDescription();
+        pizzaPrice = pizzaPrice + 1.0;
+        return this;
+    }
+
+    public PizzaBuilder pizzaName(String pizzaName) {
+        this.pizzaName = pizzaName;
+        return this;
+    }
+
+    public PizzaBuilder pizzaPrice(double pizzaPrice) {
+        this.pizzaPrice = pizzaPrice;
+        return this;
+    }
+
+    public Pizza build() {
+        return new Pizza(this);
     }
 }
+

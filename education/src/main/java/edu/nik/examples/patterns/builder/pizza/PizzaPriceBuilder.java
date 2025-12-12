@@ -1,21 +1,23 @@
-//package edu.nik.examples.patterns.builder.pizza.temp;
-//
-//public class PizzaPriceBuilder {
-//    private Pizzabb pizza;
-//    private final int ingredientPrice = 2;
-//    private final int saucePrice = 1;
-//    private final int thinDoughPrice = 5;
-//    private final int handTossedDoughPrice = 7;
-//
-//    public PizzaPriceBuilder(Pizzabb pizza) {
-//        this.pizza = pizza;
-//    }
-//
-//    public String build() {
-//        int total = 0;
-//        total += pizza.ingredients.size() * ingredientPrice;
-//        total += pizza.sauces.size() * saucePrice;
-//        total += pizza.dough == Dough.THIN ? thinDoughPrice : handTossedDoughPrice;
-//        return String.valueOf(total);
-//    }
-//}
+package edu.nik.examples.patterns.builder.pizza;
+
+public class PizzaPriceBuilder{
+    Pizza pizza;
+
+    private int ingredientPrice = 1;
+    private int saucePrice = 1;
+
+
+    public PizzaPriceBuilder(Pizza pizza) {
+        this.pizza = pizza;
+    }
+
+    public double getPrice() {
+        double price = pizza.getPrice();
+
+        price = price + pizza.getIngredients().size() * ingredientPrice;
+
+        price = price + pizza.getSauces().size() * saucePrice;
+
+        return price;
+    }
+}
