@@ -1,4 +1,4 @@
-package edu.nik.examples.patterns.builder.Coffee;
+package edu.nik.examples.patterns.builder.сoffee;
 
 public abstract class Beverage {
     String description = "Unknown Beverage";

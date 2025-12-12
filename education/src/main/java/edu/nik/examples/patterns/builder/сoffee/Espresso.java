@@ -1,4 +1,4 @@
-package edu.nik.examples.patterns.builder.Coffee;
+package edu.nik.examples.patterns.builder.сoffee;
 
 public class Espresso extends Beverage {
     public Espresso() {

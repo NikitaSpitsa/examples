@@ -1,4 +1,4 @@
-package edu.nik.examples.patterns.builder.Coffee;
+package edu.nik.examples.patterns.builder.сoffee;
 
 public class Decaf extends Beverage {
     public Decaf() {
