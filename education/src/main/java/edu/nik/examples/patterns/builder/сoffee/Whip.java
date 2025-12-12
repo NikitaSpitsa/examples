@@ -1,4 +1,4 @@
-package edu.nik.examples.patterns.builder.Coffee;
+package edu.nik.examples.patterns.builder.сoffee;
 
 public class Whip extends CondimentDecorator{
     Beverage beverage;

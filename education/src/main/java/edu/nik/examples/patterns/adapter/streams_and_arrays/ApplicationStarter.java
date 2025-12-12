@@ -3,7 +3,7 @@ package edu.nik.examples.patterns.adapter.streams_and_arrays;
 import java.util.*;
 import java.util.stream.Stream;
 
-public class RunApplication {
+public class ApplicationStarter {
     public static void main(String[] args) {
         Object[] objectsArray = new Object[5];
 
