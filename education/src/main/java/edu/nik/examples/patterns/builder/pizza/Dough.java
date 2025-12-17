@@ -1,5 +1,8 @@
 package edu.nik.examples.patterns.builder.pizza;
 
+import lombok.Getter;
+
+@Getter
 public enum Dough {
     THIN(" on the thin dough"),
     HAND_TOSSED(" on the hand tossed dough");
@@ -8,9 +11,5 @@ public enum Dough {
 
     Dough(String description) {
         this.description = description;
-    }
-
-    public String getDescription() {
-        return description;
     }
 }

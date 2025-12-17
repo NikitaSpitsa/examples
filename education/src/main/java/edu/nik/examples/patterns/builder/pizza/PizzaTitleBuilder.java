@@ -8,12 +8,12 @@ public class PizzaTitleBuilder {
     }
 
     public String getTitle() {
-        StringBuffer pizzaTitle = new StringBuffer();
-        pizzaTitle.append(pizza.getName());
-        pizzaTitle.append(pizza.getDough());
-        if (pizza.getIngredients() != null) {
+        StringBuilder pizzaTitle = new StringBuilder();
+        pizzaTitle.append(pizza.getPizzaName());
+        pizzaTitle.append(pizza.getDough().getDescription());
+        if (pizza.getIngredientsList() != null) {
             pizzaTitle.append(" with ingredients ");
-            pizzaTitle.append(pizza.getIngredients());
+            pizzaTitle.append(pizza.getIngredientsList());
         }
         return pizzaTitle.toString();
 
