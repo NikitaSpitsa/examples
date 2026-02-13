@@ -1,1 +1,4 @@
-My solution for tasks and exercises.
+
+Hi.
+
+This is my collection of educational examples and exercises.
