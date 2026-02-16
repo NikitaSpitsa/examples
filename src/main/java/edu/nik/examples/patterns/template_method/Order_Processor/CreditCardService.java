@@ -1,6 +1,6 @@
 package edu.nik.examples.patterns.template_method.Order_Processor;
 
-CreditCardService{
+class CreditCardService{
 
     protected void processPayment(Order order) {
         // Эмулируем онлайн-платёж
