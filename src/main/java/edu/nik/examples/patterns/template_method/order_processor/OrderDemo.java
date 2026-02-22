@@ -8,7 +8,7 @@ public class OrderDemo {
         OrderProcessor onlineProcessor = new OnlineOrderProcessor();
         onlineProcessor.processOrder(onlineOrder);
 
-        System.out.println( "\n----------------------\n");
+        System.out.println("\n----------------------\n");
 
         Order inStoreOrder = new Order(Arrays.asList("Pizza", "Coffee"));
         OrderProcessor inStoreProcessor = new InStoreOrderProcessor();
