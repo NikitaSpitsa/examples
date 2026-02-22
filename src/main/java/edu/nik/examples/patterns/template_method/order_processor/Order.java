@@ -1,4 +1,4 @@
-package edu.nik.examples.patterns.template_method.Order_Processor;
+package edu.nik.examples.patterns.template_method.order_processor;
 
 import java.util.List;
 

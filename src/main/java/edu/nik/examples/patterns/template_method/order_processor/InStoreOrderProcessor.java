@@ -1,15 +1,8 @@
-package edu.nik.examples.patterns.template_method.Order_Processor;
+package edu.nik.examples.patterns.template_method.order_processor;
 
 // Офлайн-заказ (например, покупка в ресторане на месте)
 class InStoreOrderProcessor extends OrderProcessor {
 
-    protected void validateOrder(Order order) {
-        // В офлайн-магазине — все на месте, можно просто проверить, что список товаров не пуст
-        if (order.items.isEmpty()) {
-            throw new IllegalArgumentException("Empty order!");
-        }
-        System.out.println("InStoreOrderProcessor: Order validated. Items ready.");
-    }
 
     protected void calculatePrice(Order order) {
         // Допустим, в офлайне нет скидок за количество
